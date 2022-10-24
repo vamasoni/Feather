@@ -1,0 +1,74 @@
+.main {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-image: url("../../Feather03.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.subtitle {
+  font-size: 150%;
+}
+
+.text {
+  font-size: 200%;
+}
+.intro-text {
+  width: 100%;
+  text-align: center;
+  padding-top: 5em;
+  color: #000;
+}
+
+.landing-button {
+  width: 100px;
+  height: 55px;
+  text-align: center;
+}
+
+.buttonContainer {
+  margin-top: 50px;
+  display: flex;
+  margin-left: 42%;
+}
+
+@media only screen and(min-width:1200px) {
+  .buttonContainer {
+    padding: 0 200px;
+  }
+  .title {
+    padding: 0 100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    padding-top: 2em;
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 100%;
+  }
+
+  .text {
+    font-size: 100%;
+  }
+
+  .landing-button {
+    width: 85px;
+    height: 55px;
+  }
+
+  .buttonContainer {
+    margin-left: 32%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
