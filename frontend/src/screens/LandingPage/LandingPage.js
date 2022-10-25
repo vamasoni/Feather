@@ -25,8 +25,7 @@ const LandingPage = () => {
                   Login
                 </Button>
               </a>
-              &nbsp;&nbsp;&nbsp; 
-              &nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
               <a href="/register">
                 <Button
                   size="lg"
@@ -41,7 +40,7 @@ const LandingPage = () => {
         </Row>
       </Container>
     </div>
-  );
+  )
 };
 
 export default LandingPage;
