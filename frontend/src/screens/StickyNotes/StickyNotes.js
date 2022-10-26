@@ -1,15 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Accordion, Badge, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import MainScreen from "../../components/MainScreen";
 import Card from "react-bootstrap/Card";
-import notes from "../../data/notes";
+import axios from 'axios';
 
 const StickyNotes = () => {
+
+  const [notes, setNotes] = useState([]);
+
   const deleteHandler = (id) => {
     if (window.confirm("Are your sure?")) {
     }
   };
+
+  const fetchNotes = async() => {
+    const {data}=await axios.get('/api/notes');
+    setNotes(data);
+  };
+
+  console.log(notes);
+
+  useEffect(() => {
+      fetchNotes();
+  }, [])
 
   return (
     <MainScreen title="Sticky Notes">
@@ -19,7 +33,7 @@ const StickyNotes = () => {
         </Button>
       </Link>
       {notes.map((note) => (
-        <Accordion>
+        <Accordion key={note._id}>
           <Card style={{ margin: 10 }} className="border-warning">
             <Card.Header style={{ display: "flex" }}>
               <span
