@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
+import MainScreen from "../../components/MainScreen";
 
 const ToDoList = () => {
-  return (
-    <div>
-      <h1>ToDo List</h1>
-    </div>
-  )
-}
+  return <MainScreen title="To-Do List">To Do's for the day?</MainScreen>;
+};
 
-export default ToDoList
+export default ToDoList;

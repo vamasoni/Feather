@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
+import MainScreen from "../../components/MainScreen";
 
 const MyDiary = () => {
-  return (
-    <div>
-      <h1>MyDiary</h1>
-    </div>
-  )
-}
+  return <MainScreen title="Your Diary">Diary Entries</MainScreen>;
+};
 
-export default MyDiary
+export default MyDiary;
